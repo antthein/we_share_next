@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- dark background, sharp edges -->
+  <rect width="32" height="32" rx="7" fill="#111111"/>
+  <!-- "w" centered left half -->
+  <text x="8" y="20" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="800" fill="#f0ede8">w</text>
+  <!-- sharp square underscore block -->
+  <rect x="13" y="22" width="13" height="3" fill="#4a9ebb"/>
+  <!-- "s" centered over the underscore -->
+  <text x="19.5" y="20" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="800" fill="#4a9ebb">s</text>
+</svg>

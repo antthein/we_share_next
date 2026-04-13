@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Nav from '@/components/Nav'
+import Toast from '@/components/Toast'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -14,15 +16,15 @@ export const metadata: Metadata = {
   icons: { icon: '/favicon.svg' },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} dark scroll-smooth`} suppressHydrationWarning>
       <body className="bg-[#fafaf9] dark:bg-[#111111] text-[#1c1a16] dark:text-[#f0ede8] font-sans antialiased min-h-screen flex flex-col">
-        {children}
+        <Nav />
+        <div className="flex-1 flex flex-col">
+          {children}
+        </div>
+        <Toast />
       </body>
     </html>
   )

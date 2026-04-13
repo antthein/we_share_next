@@ -18,7 +18,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} dark scroll-smooth`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} scroll-smooth`} suppressHydrationWarning>
+      <head>
+        {/* Apply saved theme before first paint — prevents flash */}
+        <script dangerouslySetInnerHTML={{ __html: `
+          (function() {
+            try {
+              var t = localStorage.getItem('ws-theme') || 'dark';
+              document.documentElement.classList.toggle('dark', t === 'dark');
+            } catch(e) {
+              document.documentElement.classList.add('dark');
+            }
+          })();
+        `}} />
+      </head>
       <body className="bg-[#fafaf9] dark:bg-[#111111] text-[#1c1a16] dark:text-[#f0ede8] font-sans antialiased min-h-screen flex flex-col">
         <Nav />
         <div className="flex-1 flex flex-col">

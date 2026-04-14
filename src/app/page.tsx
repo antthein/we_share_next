@@ -152,7 +152,7 @@ export default async function HomePage() {
             </div>
             <div className="flex flex-col gap-3">
               <p className="text-[0.65rem] font-bold tracking-[0.12em] uppercase text-[#1c1a16] dark:text-[#f0ede8] mb-1">Company</p>
-              <a href="#about" className="text-sm text-[#787068] hover:text-[#4a9ebb] transition-colors">About</a>
+              <Link href="/about" className="text-sm text-[#787068] hover:text-[#4a9ebb] transition-colors">About</Link>
             </div>
             <div className="flex flex-col gap-3">
               <p className="text-[0.65rem] font-bold tracking-[0.12em] uppercase text-[#1c1a16] dark:text-[#f0ede8] mb-1">Legal</p>

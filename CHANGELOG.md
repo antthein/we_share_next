@@ -1,5 +1,14 @@
 # Changelog — we_share
 
+## v0.2.0 — About page
+**Type:** Minor (new page)
+- Created `/about` as a dedicated full page (hero, stats, mission, values, CTA)
+- Nav `about` link updated from `#about` anchor to `/about` route — active highlight works correctly
+- Footer `About` link updated to `/about`
+- Home page left unchanged
+
+---
+
 Semantic Versioning: `vMAJOR.MINOR.PATCH`
 Pre-launch builds are tracked as `v0.x.x`
 

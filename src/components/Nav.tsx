@@ -11,6 +11,7 @@ const links = [
   { href: '/',            label: 'home' },
   { href: '/share_space', label: 'share_space' },
   { href: '/browse',      label: 'browse' },
+  { href: '/about',       label: 'about' },
 ]
 
 export default function Nav() {
@@ -51,7 +52,6 @@ export default function Nav() {
               </Link>
             </li>
           ))}
-          <li><a href="#about"  className="text-sm text-[#787068] hover:text-[#4a9ebb] transition-colors">about</a></li>
         </ul>
 
         {/* Right side */}

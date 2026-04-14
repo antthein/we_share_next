@@ -10,6 +10,7 @@ import { APP_VERSION } from '@/lib/version'
 const links = [
   { href: '/',            label: 'home' },
   { href: '/share_space', label: 'share_space' },
+  { href: '/quotes',      label: 'quotes' },
   { href: '/browse',      label: 'browse' },
   { href: '/about',       label: 'about' },
 ]

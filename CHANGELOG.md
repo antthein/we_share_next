@@ -1,5 +1,19 @@
 # Changelog — we_share
 
+## v0.3.0 — Quotes tab
+**Type:** Minor (new feature)
+- New `/quotes` page — 3 curated/AI quotes refreshed every UTC day
+- Daily selection: slots 1-2 from hand-picked pool, slot 3 Claude-generated (falls back to curated if no `ANTHROPIC_API_KEY`)
+- AI quotes clearly labelled with a subtle `ai pick` pill
+- Quote cards: large breathing text, theme tag, author/source attribution
+- Resonate — lightweight reaction per quote, shows aggregate count subtly
+- Bookmark — saves quote to personal collection (login required; guests shown sign-in nudge)
+- Nav updated: quotes positioned after share_space and before browse
+- New DB tables: `quotes`, `daily_quotes`, `quote_reactions`, `quote_bookmarks`
+- New env var: `ANTHROPIC_API_KEY` (optional — enables AI quote generation)
+
+---
+
 ## v0.2.0 — About page
 **Type:** Minor (new page)
 - Created `/about` as a dedicated full page (hero, stats, mission, values, CTA)

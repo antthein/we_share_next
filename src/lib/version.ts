@@ -10,4 +10,4 @@
  * Change APP_VERSION here on every update, then document it in CHANGELOG.md
  */
 
-export const APP_VERSION = 'v0.2.0'
+export const APP_VERSION = 'v0.3.0'

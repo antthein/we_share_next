@@ -68,6 +68,49 @@ export type Database = {
         Insert: Omit<Database['public']['Tables']['share_reactions']['Row'], 'id'>
         Update: never
       }
+      quotes: {
+        Row: {
+          id: string
+          text: string
+          author: string
+          source: string | null
+          theme: string
+          is_ai_generated: boolean
+          created_at: string
+        }
+        Insert: Omit<Database['public']['Tables']['quotes']['Row'], 'id' | 'created_at'>
+        Update: Partial<Database['public']['Tables']['quotes']['Insert']>
+      }
+      daily_quotes: {
+        Row: {
+          id: string
+          quote_id: string
+          date: string
+          display_order: number
+        }
+        Insert: Omit<Database['public']['Tables']['daily_quotes']['Row'], 'id'>
+        Update: never
+      }
+      quote_reactions: {
+        Row: {
+          id: string
+          quote_id: string
+          user_id: string
+          created_at: string
+        }
+        Insert: Omit<Database['public']['Tables']['quote_reactions']['Row'], 'id' | 'created_at'>
+        Update: never
+      }
+      quote_bookmarks: {
+        Row: {
+          id: string
+          quote_id: string
+          user_id: string
+          created_at: string
+        }
+        Insert: Omit<Database['public']['Tables']['quote_bookmarks']['Row'], 'id' | 'created_at'>
+        Update: never
+      }
       profiles: {
         Row: {
           id: string

@@ -5,8 +5,7 @@ import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import ThemeToggle from './ThemeToggle'
-
-const APP_VERSION = 'v1.0'
+import { APP_VERSION } from '@/lib/version'
 
 const links = [
   { href: '/',            label: 'home' },

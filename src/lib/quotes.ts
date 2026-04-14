@@ -75,7 +75,9 @@ Return ONLY valid JSON — no markdown fences, no explanation:
     const raw = msg.content[0]
     if (raw.type !== 'text') return null
 
-    const parsed = JSON.parse(raw.text.trim())
+    // Strip markdown code fences if the model wrapped the JSON anyway
+    const cleaned = raw.text.trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '')
+    const parsed = JSON.parse(cleaned)
     if (!parsed.text || !parsed.author || !parsed.theme) return null
 
     const { data } = await supabase

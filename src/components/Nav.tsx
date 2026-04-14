@@ -6,6 +6,8 @@ import { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import ThemeToggle from './ThemeToggle'
 
+const APP_VERSION = 'v1.0'
+
 const links = [
   { href: '/',            label: 'home' },
   { href: '/share_space', label: 'share_space' },
@@ -24,9 +26,15 @@ export default function Nav() {
                       border-b border-black/[0.08] dark:border-[#f0ede8]/[0.07]">
 
         {/* Wordmark */}
-        <Link href="/" className="text-[1.2rem] font-extrabold tracking-tight text-[#1c1a16] dark:text-[#f0ede8]">
-          we<span style={{ color: '#4a9ebb' }}>_</span>share
-        </Link>
+        <div className="flex items-center gap-2">
+          <Link href="/" className="text-[1.2rem] font-extrabold tracking-tight text-[#1c1a16] dark:text-[#f0ede8]">
+            we<span style={{ color: '#4a9ebb' }}>_</span>share
+          </Link>
+          <span className="text-[0.6rem] font-semibold px-1.5 py-0.5 rounded-full tabular-nums select-none"
+                style={{ background: 'rgba(74,158,187,0.1)', color: '#4a9ebb' }}>
+            {APP_VERSION}
+          </span>
+        </div>
 
         {/* Desktop nav */}
         <ul className="hidden md:flex items-center gap-8">

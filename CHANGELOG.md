@@ -1,5 +1,17 @@
 # Changelog — we_share
 
+## v0.4.0 — Write page + toast light mode fix
+**Type:** Minor (new feature)
+- New `/write` page — full post creation with Tiptap rich text editor
+- Editor toolbar: Bold, Italic, H2, H3, Bullet list, Link
+- Fields: title, excerpt, topic (10 options), tags (pill input, max 6), content
+- Read time auto-calculated live from word count (~200 wpm)
+- Auth-protected: redirects to login if not signed in
+- Nav: "write" button shown for authenticated users (desktop + mobile menu)
+- Toast colours switched to CSS variables — now respects light/dark mode correctly
+
+---
+
 ## v0.3.0 — Quotes tab
 **Type:** Minor (new feature)
 - New `/quotes` page — 3 curated/AI quotes refreshed every UTC day

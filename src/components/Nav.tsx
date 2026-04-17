@@ -61,7 +61,11 @@ export default function Nav() {
 
           {user ? (
             <div className="hidden md:flex items-center gap-3">
-              <span className="text-xs text-[#787068] truncate max-w-[120px]">{user.email}</span>
+              <Link href="/write"
+                className="text-sm font-semibold px-4 py-2 rounded-lg
+                           bg-[#4a9ebb] text-[#111] hover:opacity-85 transition-opacity">
+                write
+              </Link>
               <button
                 onClick={signOut}
                 className="text-sm font-semibold px-4 py-2 rounded-lg border border-black/[0.12] dark:border-[#f0ede8]/[0.12]
@@ -109,8 +113,12 @@ export default function Nav() {
             </Link>
           ))}
           {user ? (
-            <button onClick={() => { signOut(); setMenuOpen(false) }}
-              className="text-sm font-semibold text-[#787068] text-left">sign out</button>
+            <>
+              <Link href="/write" onClick={() => setMenuOpen(false)}
+                className="text-sm font-semibold text-[#4a9ebb]">write &rarr;</Link>
+              <button onClick={() => { signOut(); setMenuOpen(false) }}
+                className="text-sm font-semibold text-[#787068] text-left">sign out</button>
+            </>
           ) : (
             <>
               <Link href="/auth/login"  onClick={() => setMenuOpen(false)} className="text-sm text-[#787068] hover:text-[#4a9ebb]">log in</Link>
